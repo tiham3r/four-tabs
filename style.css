@@ -1,0 +1,41 @@
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'PT Serif';
+    font-size: 22px;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 2vw 2vw;
+  font-family: 'Poppins';
+    font-size: 26px;
+    font-weight: 700;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #60EB7B;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 8vw 4vw;
+  height: 100%;
+}
+
+#One {background-color: #60EB7B;}
+#Two {background-color: #38CC85;}
+#Three {background-color: #1E9C89;}
+#Four {background-color: #104954;}

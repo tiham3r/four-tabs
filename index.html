@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=PT Serif' rel='stylesheet'>
+</head>
+<body>
+    
+    <button class="tablink" onclick="openPage('One', this, '#60EB7B')" id="defaultOpen">One</button>
+    <button class="tablink" onclick="openPage('Two', this, '#38CC85')">Two</button>
+    <button class="tablink" onclick="openPage('Three', this, '#1E9C89')">Three</button>
+    <button class="tablink" onclick="openPage('Four', this, '#104954')">Four</button>
+
+<script>
+    $("#defaultOpen").click(function() {
+        $("#One").load("pages/1.txt");
+      });
+
+    $("#defaultOpen").click(function() {
+        $("#Two").load("pages/2.txt");
+      });
+
+    $("#defaultOpen").click(function() {
+        $("#Three").load("pages/3.txt");
+      });
+
+    $("#defaultOpen").click(function() {
+        $("#Four").load("pages/4.txt");
+      });
+</script>
+    
+<div id="One" class="tabcontent"></div>
+<div id="Two" class="tabcontent"></div>
+<div id="Three" class="tabcontent"></div>
+<div id="Four" class="tabcontent"></div>
+
+<script>
+    function openPage(pageName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
